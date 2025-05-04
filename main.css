@@ -1,0 +1,158 @@
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+nav ul {
+  float: right;
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+}
+nav li {
+  float: left;
+}
+nav a {
+  font-size: 0.9em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0 0 20px;
+  display: block;
+}
+nav a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  height: 75px;
+  float: left;
+}
+.logo:before,
+.logo:after {
+  position: absolute;
+  font-size: 15em;
+  font-weight: 300;
+  line-height: 0;
+  color:rgba(0, 0, 0, 0)
+  top: 25px;
+}
+.logo:before {
+  content: "»";
+  left: 20px;
+}
+.logo:after {
+  content: "«";
+  left: 34px;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.overlay-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 100px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.size {
+  font-size: 200%;
+  font-weight: 900;
+}
+.sizetwo {
+  font-size: 75%;
+  font-weight: 375;
+}
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  font-family: <uniquifier> sans-serif;
+  color: #fff;
+}
+.header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+  transform-style: inherit;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+}
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: center;
+  min-height: 100vh;
+  background-image: url(https://static.tildacdn.com/tild3139-3136-4239-b538-313238356132/2024-08-07_22-12-18.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+
+  transform: translateZ(-1px) scale(2);
+}
+.overlay-textt {
+  background-color:  rgba(0, 0, 0, 0.5);
+  padding: 75px;
+  transform: translate(-100px, -50%);
+  font-size: 150%;
+}
+.overlay-tex {
+  background-color:  rgba(0, 0, 0, 0.5);
+  padding: 75px;
+  transform: translate(-20%, -50%);
+  font-size: 150%;
+}
+.overlay-te {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 75px;
+  transform: translate(-20%, -50%);
+  font-size: 150%;
+}
+.overlay-t {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 75px;
+  transform: translate(-20%, -50%);
+  font-size: 150%;
+}

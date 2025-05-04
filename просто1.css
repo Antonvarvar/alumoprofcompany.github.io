@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+header {
+  background: #111;
+  position: relative;
+  z-index: 20;
+}
+
+.headline {
+  position: relative;
+  height: 400px;
+  color: #fff;
+  text-align: center;
+  background: url("https://static.tildacdn.com/tild3030-3261-4632-a431-383538303130/IMG_639300.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+.headline:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(-50%) translateY(-50%);
+  animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+.inner h1 {
+  margin: 0;
+  font-size: 3.5em;
+  line-height: 1.2em;
+}
+.inner p {
+  margin: 0;
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: serif;
+}
+
+nav.maxx {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  margin-top: 90px;
+}
+nav.scrolled {
+  background: rgba(17, 17, 17, 0.9);
+}
+
+.left {
+  float: left;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  box-sizing: border-box;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay-text {
+  background-color: transparent;
+  padding: 25px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.overlay-tex {
+  padding: 25px;
+  text-align: center;
+  transform: translate(0%, 200%);
+}
+
+.text {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: #105469 !important;
+}
+
+.nav-item:hover {
+  color: #e2b842 !important;
+}
+
+h1 {
+  color: #e2b842;
+  font-weight: 700;
+}
+
+footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для кнопок */
+.btn-animated {
+  transition: all 0.3s ease;
+}
+.btn-animated:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Стили для изображений */
+.profile-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+/* Улучшенные стили для формы */
+.form {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-control {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 0 5px 5px 0;
+  transition: border-color 0.3s ease;
+}
+.form-control:focus {
+  background-color: #444;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.input-group-text {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #555;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-text {
+  color: #bbb;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+  .fs-4 {
+    font-size: 1.2rem !important;
+  }
+  .fs-3 {
+    font-size: 1.5rem !important;
+  }
+  .inner h1 {
+    font-size: 2em;
+  }
+  .inner p {
+    font-size: 1em;
+  }
+  .left {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  nav.maxx {
+    margin-top: 120px;
+  }
+  .form {
+    padding: 15px;
+  }
+}
+/* Стили для контактного блока */
+.contact-info {
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.contact-info p {
+  margin: 0;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+/* Адаптивность: на маленьких экранах убираем sticky-позиционирование */
+@media (max-width: 576px) {
+  .contact-info {
+    position: static;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+.contact-info {
+  position: sticky;
+  top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+}
+.contact-info p {
+  margin: 0;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.contact-info i {
+  margin-right: 10px;
+  color: #0d6efd;
+}
